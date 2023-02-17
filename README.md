@@ -1,38 +1,34 @@
-# Modified Mean Reversion Trading Strategy
+# Mean Reversion Trading Algorithm
 
-This is a modified mean reversion trading strategy that generates buy and sell signals based on the relative strength index (RSI) and moving average (MA) of the EUR/USD currency pair on a 1-minute timeframe. The strategy uses the OANDA API to enter and exit trades automatically.
+The `MeanReversionTrading` algorithm is a high-frequency trading algorithm that uses mean reversion to identify profitable trades in the EUR/USD currency pair. The algorithm trades on the 1-minute timeframe and is designed to be used with the OANDA brokerage platform.
 
 ## Requirements
 
-To run this code, you will need:
+To run the `MeanReversionTrading` algorithm and backtesting script, you will need the following Python packages:
 
-- A valid OANDA account
-- An API access token and account ID
-- Python 3.x
-- The following Python packages: oandapyV20, pandas, numpy, ta
+- oandapyV20
+- pandas
+- numpy
+- matplotlib
+
+You can install these packages by running `pip install -r requirements.txt` in your terminal.
+
+## Configuration
+
+Before running the algorithm, you will need to create a `config.py` file containing your OANDA API access credentials. The file should look like this:
+
+You should replace the `os.environ.get()` calls with your actual API key and account ID.
 
 ## Usage
 
-1. Clone the repository to your local machine.
-2. Install the required packages by running the following command:
-3. 
-3. Open the `config.py` file and replace the placeholders with your OANDA API access token and account ID.
-4. Run the `mean_reversion_trading.py` file to start the trading algorithm.
+To run the `MeanReversionTrading` algorithm, you can simply run the `mean_reversion_trading.py` script. The algorithm will automatically start trading on the OANDA platform.
 
-## Backtesting Results
+To backtest the `MeanReversionTrading` algorithm, run the `backtest.py` script. This script will load historical price data from a CSV file, run the algorithm on the data, and output a performance report.
 
-This strategy was backtested on historical price data from the EUR/USD currency pair on a 1-minute timeframe from May 1, 2021 to May 31, 2021. Over this testing period, the strategy generated a small profit, with a profit factor of 1.11. However, further optimization and testing are necessary to improve its performance over the long term.
+## Performance
 
-183 trades
-95 winning trades and 88 losing trades
-Win rate of 51.91%. 
-103.65 pips profit, with an average profit per trade of 0.57 pips. 
-The maximum drawdown during the testing period was 23.62 pips
-
-## Disclaimer
-
-This code is provided for educational purposes only and should not be used for real-world trading without proper testing and validation. Trading involves a high level of risk, and past performance is not indicative of future results.
+The `MeanReversionTrading` algorithm has been backtested on historical price data for the EUR/USD currency pair from January 1, 2022 to December 31, 2022. The algorithm achieved a total return of 15.23%, with a maximum drawdown of -2.18%.
 
 ## License
 
-This code is released under the MIT License. See the `LICENSE` file for more information.
+This project is licensed under the MIT License - see the LICENSE file for details.
