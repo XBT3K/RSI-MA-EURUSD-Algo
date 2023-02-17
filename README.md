@@ -23,7 +23,11 @@ To run this code, you will need:
 
 This strategy was backtested on historical price data from the EUR/USD currency pair on a 1-minute timeframe from May 1, 2021 to May 31, 2021. Over this testing period, the strategy generated a small profit, with a profit factor of 1.11. However, further optimization and testing are necessary to improve its performance over the long term.
 
-![Backtesting results for modified mean reversion strategy on EUR/USD 1-minute timeframe](https://i.imgur.com/0dJfxh1.png)
+183 trades
+95 winning trades and 88 losing trades
+Win rate of 51.91%. 
+103.65 pips profit, with an average profit per trade of 0.57 pips. 
+The maximum drawdown during the testing period was 23.62 pips
 
 ## Disclaimer
 
